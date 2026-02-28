@@ -259,19 +259,19 @@ AGENT_REGISTRY = {
 #### Phase 1: Foundation (Backend Skeleton + Gemini Integration)
 
 **Tasks:**
-- [ ] Initialize git repo, create `.gitignore` (include `.env`, `*.env`, `node_modules/`, `__pycache__/`, `.venv/`), `README.md`
-- [ ] Set up Python project: `pyproject.toml`, `requirements.txt` (pinned versions), virtual environment
-- [ ] Create FastAPI app skeleton: `main.py` with CORS (locked to `localhost:5173`), generic exception handler (scrubs API keys from errors), lifespan
-- [ ] Implement `config.py` — pydantic-settings with startup validation for `GEMINI_API_KEY`
-- [ ] Implement `gemini_client.py` — Gemini SDK wrapper with:
+- [x] Initialize git repo, create `.gitignore` (include `.env`, `*.env`, `node_modules/`, `__pycache__/`, `.venv/`), `README.md`
+- [x] Set up Python project: `pyproject.toml`, `requirements.txt` (pinned versions), virtual environment
+- [x] Create FastAPI app skeleton: `main.py` with CORS (locked to `localhost:5173`), generic exception handler (scrubs API keys from errors), lifespan
+- [x] Implement `config.py` — pydantic-settings with startup validation for `GEMINI_API_KEY`
+- [x] Implement `gemini_client.py` — Gemini SDK wrapper with:
   - Token bucket rate limiter at 12 RPM (asyncio.Lock + time.monotonic)
   - Exponential backoff with jitter on 429/503 responses (max 3 retries)
   - Structured output via `response_schema` parameter
   - Async support via `client.aio`
   - LLMClient protocol for dependency injection
-- [ ] Define all Pydantic schemas in `schemas.py` (see Agent I/O Schemas below) — all fields constrained with `Field()`
-- [ ] Write unit tests for Gemini client (rate limiting, retry logic, backoff with jitter)
-- [ ] Health endpoint at `/api/v1/health`
+- [x] Define all Pydantic schemas in `schemas.py` (see Agent I/O Schemas below) — all fields constrained with `Field()`
+- [x] Write unit tests for Gemini client (rate limiting, retry logic, backoff with jitter)
+- [x] Health endpoint at `/api/v1/health`
 
 **Success criteria:** `uvicorn app.main:app --host 127.0.0.1` starts, `/api/v1/health` returns 200, Gemini client can make a rate-limited call, startup fails fast if `GEMINI_API_KEY` is missing.
 

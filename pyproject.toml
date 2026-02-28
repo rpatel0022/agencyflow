@@ -1,0 +1,9 @@
+[project]
+name = "agencyflow"
+version = "0.1.0"
+description = "Multi-agent AI platform that automates marketing agency campaign workflows"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
