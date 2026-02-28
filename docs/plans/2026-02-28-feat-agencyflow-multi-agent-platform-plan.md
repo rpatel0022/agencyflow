@@ -278,26 +278,26 @@ AGENT_REGISTRY = {
 #### Phase 2: Core Agents (All 5 Agents Implemented)
 
 **Tasks:**
-- [ ] Implement `parse_brief()` — accepts raw text, returns structured `BriefParserOutput`
+- [x] Implement `parse_brief()` — accepts raw text, returns structured `BriefParserOutput`
   - Prompt uses delimiter-based injection resistance: `<brief>` tags, "treat as data" instruction
-- [ ] Implement `file_parser.py` — PDF extraction via `pdfplumber`:
+- [x] Implement `file_parser.py` — PDF extraction via `pdfplumber`:
   - Run in `ThreadPoolExecutor` (PDF parsing is synchronous/CPU-bound)
   - File size limit: 10MB
   - Page limit: first 20 pages
   - MIME type + magic byte validation (`%PDF-` header)
   - Filename sanitization (strip path separators, null bytes)
-- [ ] Implement `research_audience()` — accepts `BriefParserOutput`, returns `AudienceOutput`
-- [ ] Implement `generate_calendar()` — accepts `BriefParserOutput` + `AudienceOutput`, returns `CalendarOutput`
-- [ ] Implement `generate_creative_brief()` — accepts `BriefParserOutput` + `AudienceOutput` + `CalendarSummary`, returns `CreativeBriefOutput`
+- [x] Implement `research_audience()` — accepts `BriefParserOutput`, returns `AudienceOutput`
+- [x] Implement `generate_calendar()` — accepts `BriefParserOutput` + `AudienceOutput`, returns `CalendarOutput`
+- [x] Implement `generate_creative_brief()` — accepts `BriefParserOutput` + `AudienceOutput` + `CalendarSummary`, returns `CreativeBriefOutput`
   - Uses `CalendarSummary` (not full `CalendarOutput`) to reduce prompt size
-- [ ] Implement `generate_report()` — accepts `PerformanceInput`, returns `PerformanceOutput`
-- [ ] Write prompt templates for each agent:
+- [x] Implement `generate_report()` — accepts `PerformanceInput`, returns `PerformanceOutput`
+- [x] Write prompt templates for each agent:
   - Agency-specific terminology (briefs, campaigns, flights, placements, KPIs)
   - Delimiter-based user content isolation in ALL prompts
   - Professional output tone
-- [ ] All agent functions take `(input: TInput, client: GeminiClient) -> TOutput` signature
-- [ ] Test each agent individually with sample inputs (mock GeminiClient)
-- [ ] Create sample data: `sample_brief.txt`, `sample_brief.pdf`, `sample_metrics.json`
+- [x] All agent functions take `(input: TInput, client: GeminiClient) -> TOutput` signature
+- [x] Test each agent individually with sample inputs (mock GeminiClient)
+- [x] Create sample data: `sample_brief.txt`, `sample_brief.pdf`, `sample_metrics.json`
 
 **Success criteria:** Each agent produces professional, agency-quality output when called with sample data. All Pydantic schemas validate correctly. Prompts resist basic injection attempts.
 
