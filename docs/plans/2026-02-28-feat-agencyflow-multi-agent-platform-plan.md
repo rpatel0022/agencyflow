@@ -1,7 +1,7 @@
 ---
 title: "feat: Build AgencyFlow Multi-Agent Campaign Automation Platform"
 type: feat
-status: active
+status: completed
 date: 2026-02-28
 origin: docs/brainstorms/2026-02-28-agencyflow-multi-agent-platform-brainstorm.md
 deepened: 2026-02-28
@@ -366,15 +366,15 @@ AGENT_REGISTRY = {
 #### Phase 5: Polish, Testing, and Demo Prep
 
 **Tasks:**
-- [ ] Handle edge cases: empty brief, missing fields, API timeout, malformed PDF
-- [ ] Add loading states and error states to all UI components
-- [ ] Write comprehensive README: setup instructions, architecture diagram, demo guide
-- [ ] Create a demo script: what to show, in what order, talking points
-- [ ] Run full end-to-end test with a realistic agency brief
-- [ ] Polish agent prompts for output quality
-- [ ] Run `pip audit` and `npm audit` for dependency vulnerabilities
-- [ ] Final UI polish pass
-- [ ] Test prompt injection resistance (try common injection patterns, verify they fail)
+- [x] Handle edge cases: empty brief, missing fields, API timeout, malformed PDF
+- [x] Add loading states and error states to all UI components
+- [x] Write comprehensive README: setup instructions, architecture diagram, demo guide
+- [x] Create a demo script: what to show, in what order, talking points
+- [x] Run full end-to-end test with a realistic agency brief
+- [x] Polish agent prompts for output quality
+- [x] Run `pip audit` and `npm audit` for dependency vulnerabilities
+- [x] Final UI polish pass
+- [x] Test prompt injection resistance (try common injection patterns, verify they fail)
 
 **Success criteria:** The platform can be demo'd in a 10-minute meeting with zero crashes, professional output quality, and a clear narrative.
 

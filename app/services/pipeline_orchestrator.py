@@ -12,6 +12,8 @@ from app.agents.content_calendar import generate_calendar
 from app.agents.creative_brief import generate_creative_brief
 from app.agents.performance_reporter import generate_report
 from app.gemini_client import LLMClient
+from pydantic import ValidationError
+
 from app.schemas import (
     AudienceOutput,
     BriefParserInput,
@@ -222,6 +224,22 @@ class PipelineOrchestrator:
             run._emit("pipeline_complete")
             logger.info(f"Pipeline {run.run_id} completed in {run._elapsed_ms()}ms")
 
+        except ValidationError as exc:
+            run.status = PipelineStatus.FAILED
+            run.error = f"Agent returned invalid data: {exc.error_count()} validation error(s)"
+            run.failed_agent = _detect_failed_agent(run)
+            run._emit(
+                "pipeline_failed",
+                failed_agent=run.failed_agent,
+                error={
+                    "agent_name": run.failed_agent,
+                    "error_type": "ValidationError",
+                    "message": run.error,
+                    "retryable": True,
+                },
+            )
+            logger.error(f"Pipeline {run.run_id} validation error at {run.failed_agent}: {exc}")
+
         except Exception as exc:
             run.status = PipelineStatus.FAILED
             run.error = str(exc)
@@ -276,6 +294,8 @@ def _detect_failed_agent(run: PipelineRun) -> str:
 
 
 def _is_retryable(exc: Exception) -> bool:
-    """Check if the error is retryable (rate limit or server error)."""
+    """Check if the error is retryable (rate limit, server error, or timeout)."""
+    if isinstance(exc, (TimeoutError, asyncio.TimeoutError)):
+        return True
     status_code = getattr(exc, "status_code", None) or getattr(exc, "code", None)
     return status_code in {429, 503}

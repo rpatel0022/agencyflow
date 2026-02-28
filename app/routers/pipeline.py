@@ -40,6 +40,9 @@ async def run_pipeline(
     if file is None and not text:
         raise HTTPException(status_code=422, detail="Provide either a file or text brief")
 
+    if file is None and text and len(text.strip()) < 10:
+        raise HTTPException(status_code=422, detail="Brief text is too short (minimum 10 characters)")
+
     raw_text: str
     source_filename: str | None = None
 

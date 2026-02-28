@@ -61,6 +61,7 @@ class GeminiClient:
     MAX_RETRIES = 3
     BASE_DELAY = 1.0  # seconds
     MAX_DELAY = 30.0  # seconds
+    CALL_TIMEOUT = 60.0  # seconds per API call
     RETRYABLE_STATUS_CODES = {429, 503}
 
     def __init__(
@@ -94,15 +95,28 @@ class GeminiClient:
             await self._rate_limiter.acquire()
 
             try:
-                response = await self._client.aio.models.generate_content(
-                    model=self._model,
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        response_mime_type="application/json",
-                        response_schema=response_schema,
+                response = await asyncio.wait_for(
+                    self._client.aio.models.generate_content(
+                        model=self._model,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(
+                            response_mime_type="application/json",
+                            response_schema=response_schema,
+                        ),
                     ),
+                    timeout=self.CALL_TIMEOUT,
                 )
                 return json.loads(response.text)
+
+            except asyncio.TimeoutError:
+                last_error = TimeoutError(f"Gemini API call timed out after {self.CALL_TIMEOUT}s")
+                delay = self._backoff_delay(attempt)
+                logger.warning(
+                    f"Gemini API timed out, retrying in {delay:.1f}s "
+                    f"(attempt {attempt + 1}/{self.MAX_RETRIES})"
+                )
+                await asyncio.sleep(delay)
+                continue
 
             except Exception as exc:
                 last_error = exc
