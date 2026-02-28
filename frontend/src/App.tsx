@@ -140,6 +140,7 @@ function App() {
               selectedAgent={selectedAgent}
               outputs={pipeline.outputs}
               error={pipeline.error}
+              steps={pipeline.steps}
             />
           </div>
         </div>

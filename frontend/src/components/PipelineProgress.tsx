@@ -21,7 +21,8 @@ export function PipelineProgress({ steps, selectedAgent, onSelectAgent }: Pipeli
         <div
           key={step.name}
           className={`pipeline-step ${selectedAgent === step.name ? 'active' : ''}`}
-          onClick={() => step.status === 'complete' && onSelectAgent(step.name)}
+          onClick={() => step.status !== 'pending' && onSelectAgent(step.name)}
+          style={{ cursor: step.status === 'pending' ? 'default' : 'pointer', opacity: step.status === 'pending' ? 0.5 : 1 }}
         >
           <div className={`step-indicator ${step.status}`} />
           <span className="step-name">{AGENT_DISPLAY_NAMES[step.name]}</span>

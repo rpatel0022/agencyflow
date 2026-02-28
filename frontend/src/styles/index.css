@@ -150,6 +150,11 @@ body {
   color: var(--accent-gold);
 }
 
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* Brief Upload */
 .upload-section {
   max-width: 700px;
@@ -548,9 +553,52 @@ body {
   background: var(--bg-surface);
   border: 1px solid var(--status-error);
   border-radius: 6px;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--status-error);
   font-family: var(--font-mono);
   font-size: 0.85rem;
+}
+
+.error-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-hint {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* Loading Skeleton */
+.skeleton-card {
+  animation: skeleton-fade 1.5s infinite ease-in-out;
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: 3px;
+  background: var(--bg-elevated);
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-title {
+  width: 40%;
+  height: 20px;
+  margin-bottom: 1rem;
+}
+
+.skeleton-text {
+  width: 80%;
+}
+
+.skeleton-text.short {
+  width: 50%;
+}
+
+@keyframes skeleton-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
