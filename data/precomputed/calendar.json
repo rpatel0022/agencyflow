@@ -1,0 +1,73 @@
+{
+  "campaign_duration": "8 weeks (May 1 - June 30, 2026)",
+  "posting_frequency": "5 posts per week across all channels (3 Instagram, 4 TikTok, 2 YouTube Shorts, 1 Twitter/X)",
+  "entries": [
+    {
+      "week": 1,
+      "day": "Monday",
+      "channel": "Instagram",
+      "content_type": "Carousel",
+      "topic": "Flavor reveal teaser — 3 new flavors",
+      "caption_hook": "Three new flavors are dropping this summer. Swipe to guess them all...",
+      "hashtags": ["#SummerVibes", "#SunsetBeverages", "#NewFlavors"],
+      "notes": "Use product photography with natural lighting. Show bottles against sunset gradient."
+    },
+    {
+      "week": 1,
+      "day": "Tuesday",
+      "channel": "TikTok",
+      "content_type": "Short-form video",
+      "topic": "Behind-the-scenes: how it's made",
+      "caption_hook": "POV: You watch us make a drink with only 3 ingredients",
+      "hashtags": ["#BTS", "#CleanLabel", "#FYP"],
+      "notes": "Film in production facility. Show real fruit going in. Keep it raw and authentic."
+    },
+    {
+      "week": 1,
+      "day": "Wednesday",
+      "channel": "Instagram",
+      "content_type": "Reel",
+      "topic": "Taste test reaction — first sips",
+      "caption_hook": "We gave 50 strangers our new sparkling water. Their reactions? Unscripted.",
+      "hashtags": ["#TasteTest", "#SunsetBeverages", "#HonestReaction"],
+      "notes": "Use real people, not models. Film in park/outdoor setting."
+    },
+    {
+      "week": 2,
+      "day": "Monday",
+      "channel": "TikTok",
+      "content_type": "Duet challenge",
+      "topic": "Summer drink swap challenge",
+      "caption_hook": "Swap your sugary drink for this. I'll go first.",
+      "hashtags": ["#DrinkSwap", "#HealthySwap", "#SummerVibes2026"],
+      "notes": "Partner with 3 micro-influencers to seed the challenge."
+    },
+    {
+      "week": 2,
+      "day": "Thursday",
+      "channel": "YouTube Shorts",
+      "content_type": "Short-form video",
+      "topic": "Ingredient comparison: us vs. leading brand",
+      "caption_hook": "3 ingredients vs. 17. Which would you drink?",
+      "hashtags": ["#IngredientCheck", "#CleanDrinking"],
+      "notes": "Side-by-side label comparison. Keep it factual, not attacking."
+    },
+    {
+      "week": 3,
+      "day": "Monday",
+      "channel": "Instagram",
+      "content_type": "Story series",
+      "topic": "Day in the life with Sunset Beverages",
+      "caption_hook": "From morning yoga to sunset beach — this is how I hydrate",
+      "hashtags": ["#DITL", "#SunsetBeverages"],
+      "notes": "Influencer takeover. Use story polls and questions for engagement."
+    }
+  ],
+  "channel_strategies": [
+    {"channel": "Instagram", "strategy": "Mix of Reels (60%) and Carousels (40%) for discovery + saves. Focus on lifestyle imagery with natural settings. Instagram is the conversion channel — link in bio to shop."},
+    {"channel": "TikTok", "strategy": "100% short-form video. Prioritize trends, challenges, and creator partnerships. TikTok is the discovery engine — go for virality and brand awareness, not direct sales."},
+    {"channel": "YouTube Shorts", "strategy": "Repurpose top-performing TikTok content with slight edits. Focus on educational content (ingredient comparisons, health benefits) that has longer shelf life."},
+    {"channel": "Twitter/X", "strategy": "Community engagement and real-time conversation. Respond to mentions, join wellness threads, share user testimonials. Lowest budget allocation — test and learn."}
+  ],
+  "content_mix_rationale": "Video-first approach (80% video, 20% static) aligns with Gen Z and millennial consumption patterns. UGC and creator content prioritized over brand-produced content based on audience research showing 3:1 engagement premium for authentic content."
+}

@@ -1,0 +1,45 @@
+{
+  "personas": [
+    {
+      "name": "Wellness Wendy",
+      "age_range": "25-34",
+      "description": "Health-conscious professional who follows fitness influencers and tracks macros. Shops at Whole Foods, does yoga, and discovers new products through Instagram Reels.",
+      "motivations": ["Stay healthy without sacrificing taste", "Discover clean-label products", "Share wellness finds with friends"],
+      "pain_points": ["Too many sugary options marketed as healthy", "Hard to find genuinely natural drinks", "Skeptical of health claims"],
+      "preferred_channels": ["Instagram", "TikTok"],
+      "content_preferences": ["Short-form video", "Before/after taste tests", "Ingredient breakdowns"]
+    },
+    {
+      "name": "Gen Z Zach",
+      "age_range": "18-24",
+      "description": "College student who spends 3+ hours daily on TikTok. Values authenticity over polish. Makes purchasing decisions based on creator recommendations, not ads.",
+      "motivations": ["Find affordable healthy alternatives", "Support brands that align with values", "Create content around lifestyle choices"],
+      "pain_points": ["Can't tell real brands from cash grabs", "Student budget limits premium purchases", "Overwhelmed by product choices"],
+      "preferred_channels": ["TikTok", "YouTube Shorts"],
+      "content_preferences": ["Unboxing videos", "Day-in-my-life content", "Honest reviews"]
+    },
+    {
+      "name": "Active Alex",
+      "age_range": "22-30",
+      "description": "Fitness enthusiast who works out 5x/week. Follows gym influencers and nutrition accounts. Looks for post-workout hydration that isn't loaded with sugar or artificial sweeteners.",
+      "motivations": ["Optimize nutrition and hydration", "Find gym-bag-friendly drinks", "Share fitness journey content"],
+      "pain_points": ["Most sports drinks are sugar bombs", "Limited natural options at convenience stores", "Tired of plain water"],
+      "preferred_channels": ["Instagram", "YouTube Shorts", "TikTok"],
+      "content_preferences": ["Workout routine content", "Nutrition tip carousels", "Product comparison videos"]
+    }
+  ],
+  "targeting_recommendations": [
+    "Target fitness and wellness interest groups on Instagram and TikTok",
+    "Lookalike audiences based on competitors (Spindrift, LaCroix, Hint Water)",
+    "Geo-target warm-climate metros for summer launch: LA, Miami, Austin, Phoenix",
+    "Daypart targeting: mornings (pre-workout) and afternoons (work refreshment)"
+  ],
+  "audience_size_estimate": "12-15M reachable users in target demo across Instagram and TikTok",
+  "key_insights": [
+    "This audience values authenticity over production polish — UGC outperforms studio content 3:1",
+    "Ingredient transparency is the #1 purchase driver for health-conscious 18-34s",
+    "TikTok is the discovery channel, Instagram is where they follow and purchase",
+    "Micro-influencers (10K-100K followers) drive higher conversion than mega-influencers"
+  ],
+  "suggested_tone": "Casual, energetic, and authentic — like a friend recommending their new favorite drink, never preachy or corporate"
+}
