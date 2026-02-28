@@ -339,27 +339,27 @@ AGENT_REGISTRY = {
 #### Phase 4: React Dashboard
 
 **Tasks:**
-- [ ] Initialize React + Vite + TypeScript project with `strict: true` in tsconfig
-- [ ] Configure Vite proxy to FastAPI backend
-- [ ] Create TypeScript types in `types/agents.ts` and `types/pipeline.ts` mirroring backend schemas
-- [ ] Build `WelcomeState` — "Upload Brief" CTA + "Try Demo" button
-- [ ] Build `BriefUpload` — file drop zone (PDF only, 10MB limit) + text paste area
-- [ ] Build `PipelineProgress` — vertical step list with:
+- [x] Initialize React + Vite + TypeScript project with `strict: true` in tsconfig
+- [x] Configure Vite proxy to FastAPI backend
+- [x] Create TypeScript types in `types/agents.ts` and `types/pipeline.ts` mirroring backend schemas
+- [x] Build `WelcomeState` — "Upload Brief" CTA + "Try Demo" button
+- [x] Build `BriefUpload` — file drop zone (PDF only, 10MB limit) + text paste area
+- [x] Build `PipelineProgress` — vertical step list with:
   - Agent name + status (pending/running/complete/failed)
   - Checkmark for completed, spinner for active, red X for failed
   - Elapsed time display
   - Connected via SSE (`usePipeline` hook wraps `EventSource`)
-- [ ] Build 5 per-agent output components:
+- [x] Build 5 per-agent output components:
   - `BriefOutput.tsx` — structured key-value pairs, highlights missing fields
   - `AudienceOutput.tsx` — persona cards with channel tags
   - `CalendarOutput.tsx` — table/grid view grouped by week
   - `CreativeBriefOutput.tsx` — formatted document layout
   - `PerformanceOutput.tsx` — metrics summary + channel breakdown
-- [ ] Build `Dashboard` layout — sidebar with pipeline steps, main content shows selected output
-- [ ] Build `DemoToggle` — switch between live API and pre-computed demo mode
-- [ ] All string rendering uses React's default JSX escaping (never `dangerouslySetInnerHTML`)
-- [ ] Style with design system (see Design System section below)
-- [ ] Test full user flow: upload → SSE progress → outputs
+- [x] Build `Dashboard` layout — sidebar with pipeline steps, main content shows selected output
+- [x] Build `DemoToggle` — switch between live API and pre-computed demo mode
+- [x] All string rendering uses React's default JSX escaping (never `dangerouslySetInnerHTML`)
+- [x] Style with design system (see Design System section below)
+- [x] Test full user flow: upload → SSE progress → outputs
 
 **Success criteria:** Full demo flow works in browser. Dashboard looks professional. Demo mode loads instantly. SSE updates feel real-time.
 
