@@ -1,0 +1,32 @@
+{
+  "campaign_name": "Summer Vibes 2026",
+  "client_name": "Sunset Beverages",
+  "objectives": [
+    "Generate 5M social media impressions across all platforms",
+    "Drive 50,000 website visits from social channels",
+    "Achieve 10,000 first-time purchases via influencer promo codes"
+  ],
+  "target_audience": "Health-conscious consumers aged 18-34 who follow wellness and fitness influencers",
+  "budget": "$150,000 total — $60K influencer, $50K paid social, $25K content production, $15K contingency",
+  "timeline": "8 weeks: May 1 - June 30, 2026",
+  "kpis": [
+    "5M social impressions",
+    ">4% engagement rate",
+    "50K website visits",
+    "10K first purchases"
+  ],
+  "channels": ["Instagram", "TikTok", "YouTube Shorts", "Twitter/X"],
+  "key_messages": [
+    "Real fruit, real refreshment — no artificial anything",
+    "Your summer soundtrack deserves a better drink",
+    "Made with 3 ingredients you can actually pronounce"
+  ],
+  "constraints": [
+    "FDA compliant health claims only",
+    "FTC disclosure on all sponsored content",
+    "No alcohol positioning or party imagery",
+    "Brand photography must use natural lighting"
+  ],
+  "raw_summary": "Sunset Beverages is launching a new line of sparkling fruit waters targeting millennials and Gen Z health-conscious consumers. The 8-week campaign spans Instagram, TikTok, YouTube Shorts, and Twitter/X with a $150K budget split across influencer partnerships, paid social, and content production.",
+  "missing_fields": []
+}

@@ -304,7 +304,7 @@ AGENT_REGISTRY = {
 #### Phase 3: Pipeline Orchestration + API Routes
 
 **Tasks:**
-- [ ] Implement `pipeline_orchestrator.py`:
+- [x] Implement `pipeline_orchestrator.py`:
   - DAG execution: Brief Parser → (Audience Research) → Content Calendar → Creative Brief
   - Fan-in: Creative Brief receives accumulated outputs from prior steps
   - Parallel branch: Performance Reporter runs via `asyncio.gather` with main pipeline
@@ -312,7 +312,7 @@ AGENT_REGISTRY = {
   - Run ID (UUID) returned from POST, used for SSE streaming
   - `asyncio.Lock` around state mutations (prevent torn reads)
   - Reject concurrent runs with HTTP 409 Conflict
-- [ ] Implement `routers/pipeline.py`:
+- [x] Implement `routers/pipeline.py`:
   - `POST /api/v1/pipeline/run` — see API Contract below
   - `GET /api/v1/pipeline/stream/{run_id}` — SSE endpoint, pushes events per SSE Event Schemas
   - `POST /api/v1/pipeline/demo` — runs pipeline with pre-computed outputs (instant)
@@ -329,10 +329,10 @@ AGENT_REGISTRY = {
   - `409 Conflict`: Pipeline already running (non-terminal state)
   - `413 Payload Too Large`: File exceeds 10MB
 - **Performance Reporter:** Always runs with bundled `sample_metrics.json` in v1. No user-provided metrics in initial scope.
-- [ ] Add file upload handling with validation (size limit, type check)
-- [ ] Generate pre-computed demo outputs (run pipeline once, save JSON outputs)
-- [ ] Write integration tests for pipeline + routes
-- [ ] Add `AgentError` schema for structured error responses
+- [x] Add file upload handling with validation (size limit, type check)
+- [x] Generate pre-computed demo outputs (run pipeline once, save JSON outputs)
+- [x] Write integration tests for pipeline + routes
+- [x] Add `AgentError` schema for structured error responses
 
 **Success criteria:** Full pipeline runs via API: upload brief → get all 5 agent outputs. Demo mode returns instant results. SSE pushes status updates in real-time. Concurrent run attempts return 409.
 

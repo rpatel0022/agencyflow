@@ -6,13 +6,26 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.config import settings
+from app.gemini_client import GeminiClient
+from app.routers.health import router as health_router
+from app.routers.pipeline import router as pipeline_router
+from app.services.pipeline_orchestrator import PipelineOrchestrator
 
 logger = logging.getLogger("agencyflow")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    """Create shared resources on startup, clean up on shutdown.
+
+    WHY lifespan over @app.on_event: lifespan is the modern FastAPI pattern.
+    It uses a context manager so startup and shutdown are in one place, and
+    the resources (like GeminiClient) are guaranteed to be cleaned up.
+    """
     logger.info("AgencyFlow starting up")
+    # Create the Gemini client and pipeline orchestrator once, shared across requests
+    client = GeminiClient()
+    app.state.orchestrator = PipelineOrchestrator(client)
     yield
     logger.info("AgencyFlow shutting down")
 
@@ -46,6 +59,5 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 
 
-@app.get("/api/v1/health")
-async def health():
-    return {"status": "healthy", "version": "0.1.0"}
+app.include_router(health_router)
+app.include_router(pipeline_router)

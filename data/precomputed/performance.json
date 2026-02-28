@@ -1,0 +1,63 @@
+{
+  "executive_summary": "The Summer Vibes 2026 campaign exceeded its primary impression target by 48%, generating 7.4M impressions against a 5M goal. TikTok emerged as the strongest performer with 6.2% engagement rate, while Instagram drove the highest conversion volume. Total campaign spend was $80K against $85K planned budget, delivering a blended CPA of $8.35 across 9,580 conversions. The #DrinkSwap challenge generated 280+ UGC pieces organically.",
+  "overall_performance": "Exceeding targets",
+  "channel_analysis": [
+    {
+      "channel": "Instagram",
+      "performance_rating": "Strong",
+      "key_metric": "4.7% engagement rate with 4,200 conversions",
+      "insight": "Carousel posts drove highest saves and shares (2.3x average). Reels outperformed static posts on reach but carousels had higher conversion rates. Influencer takeover stories generated 3x normal story views.",
+      "recommendation": "Increase carousel frequency by 20% in Phase 2. Test shoppable Reels for direct conversion."
+    },
+    {
+      "channel": "TikTok",
+      "performance_rating": "Exceptional",
+      "key_metric": "6.2% engagement rate — highest across all channels",
+      "insight": "The #DrinkSwap challenge went semi-viral with 280+ UGC submissions. Creator partnerships with micro-influencers (10K-50K) outperformed mid-tier creators on engagement by 2.1x. Best posting time: 6-9 PM weekdays.",
+      "recommendation": "Double down on TikTok for Phase 2. Shift 10% of Twitter/X budget here. Expand micro-influencer roster from 4 to 8 creators."
+    },
+    {
+      "channel": "YouTube Shorts",
+      "performance_rating": "Moderate",
+      "key_metric": "3.1% engagement rate with steady but slow growth",
+      "insight": "Educational content (ingredient comparisons) had 4x longer watch time than promotional content. YouTube Shorts audience skews slightly older (25-35) than TikTok. Content has longer shelf life — day 30 views were 40% of day 1.",
+      "recommendation": "Lean into educational content format. Create a 'Clean Label 101' series. Repurpose top TikTok content but add educational hooks."
+    },
+    {
+      "channel": "Twitter/X",
+      "performance_rating": "Underperforming",
+      "key_metric": "1.8% engagement rate — lowest across all channels",
+      "insight": "Organic reach was limited. Thread format performed better than single tweets (3.2x engagement). Community engagement replies drove more profile visits than scheduled posts. Low conversion attribution.",
+      "recommendation": "Reduce Twitter/X budget by 50% and reallocate to TikTok and Instagram. Shift to community management focus only — respond, don't broadcast."
+    }
+  ],
+  "top_performing_content": [
+    "#DrinkSwap challenge TikTok (1.2M views, 6.8% engagement)",
+    "Flavor reveal carousel on Instagram (89K impressions, 7.2% engagement)",
+    "Behind-the-scenes manufacturing Reel (340K views)",
+    "Ingredient comparison YouTube Short (180K views, 4.5% engagement)",
+    "Influencer takeover story series (42K story views, 12% completion rate)"
+  ],
+  "recommendations": [
+    "Shift 10% of Twitter/X budget to TikTok for Phase 2",
+    "Expand micro-influencer roster from 4 to 8 creators based on high-performing partnerships",
+    "Increase carousel post frequency on Instagram by 20%",
+    "Create a dedicated 'Clean Label 101' educational series for YouTube Shorts",
+    "Test Instagram shoppable Reels for direct product links",
+    "Launch Phase 2 UGC contest to sustain organic content generation"
+  ],
+  "next_steps": [
+    "Brief influencer partners for Phase 2 campaign extension",
+    "Compile top 50 UGC submissions for brand content library",
+    "Set up A/B test framework for Instagram Reels vs Carousels conversion",
+    "Negotiate expanded TikTok creator partnership rates for Q3"
+  ],
+  "key_metrics_summary": [
+    {"metric_name": "Total Impressions", "value": "7.4M", "trend": "up"},
+    {"metric_name": "Average Engagement Rate", "value": "4.2%", "trend": "up"},
+    {"metric_name": "Website Visits", "value": "74,700", "trend": "up"},
+    {"metric_name": "Total Conversions", "value": "9,580", "trend": "up"},
+    {"metric_name": "Blended CPA", "value": "$8.35", "trend": "down"},
+    {"metric_name": "Campaign Spend", "value": "$80,000", "trend": "stable"}
+  ]
+}
