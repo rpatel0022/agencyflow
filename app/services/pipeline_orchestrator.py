@@ -255,7 +255,10 @@ class PipelineOrchestrator:
                     "retryable": _is_retryable(exc),
                 },
             )
-            logger.error(f"Pipeline {run.run_id} failed at {run.failed_agent}: {exc}")
+            logger.error(
+                f"Pipeline {run.run_id} failed at {run.failed_agent}: "
+                f"{type(exc).__name__}: {exc!r}"
+            )
 
         finally:
             # Signal end of stream — SSE endpoint stops when it reads None

@@ -7,6 +7,7 @@ from fastapi.responses import JSONResponse
 
 from app.config import settings
 from app.gemini_client import GeminiClient
+from app.ollama_client import OllamaClient
 from app.routers.health import router as health_router
 from app.routers.pipeline import router as pipeline_router
 from app.services.pipeline_orchestrator import PipelineOrchestrator
@@ -23,10 +24,18 @@ async def lifespan(app: FastAPI):
     the resources (like GeminiClient) are guaranteed to be cleaned up.
     """
     logger.info("AgencyFlow starting up")
-    # Create the Gemini client and pipeline orchestrator once, shared across requests
-    client = GeminiClient()
+    # Pick the LLM client based on config — both satisfy the LLMClient Protocol
+    if settings.llm_provider == "ollama":
+        logger.info(f"Using Ollama ({settings.ollama_model}) at {settings.ollama_base_url}")
+        client = OllamaClient()
+    else:
+        logger.info(f"Using Gemini ({settings.gemini_model})")
+        client = GeminiClient()
     app.state.orchestrator = PipelineOrchestrator(client)
     yield
+    # Clean up httpx client if using Ollama
+    if hasattr(client, "close"):
+        await client.close()
     logger.info("AgencyFlow shutting down")
 
 
